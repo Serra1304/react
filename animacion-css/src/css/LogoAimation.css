@@ -1,0 +1,87 @@
+.container-logo {
+    display: flex;
+    flex-direction: row;
+}
+
+.subcontainer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 1rem;
+    gap: 1rem;
+}
+
+.logoG {
+    width: 0px;
+    animation: curtain-logo1 1s forwards;
+    animation-delay: 3.5s;
+}
+  
+.logoDivisor {
+    min-width: 1px;
+    animation: intermittent 1s 3;
+    animation-delay: 0.5s;
+}
+  
+.logoGtorres {
+    width: 0px; 
+    animation: curtain-logo2 2s forwards;
+    animation-delay: 5s;
+}
+
+.logoDeveloper {
+    width: 0px;
+    animation: curtain-logo2 1s forwards;
+    animation-delay: 7s;
+}
+
+.out1 {
+    animation: out-logo1 2s forwards;
+    animation-delay: 2s;
+}
+
+.out2 {
+    animation: out-logo2 1s forwards;
+    animation-delay: 0s;
+    overflow: hidden;
+}
+
+@keyframes intermittent {
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+}
+  
+@keyframes curtain-logo1 {
+    from { width: 0; }
+    to   { width: 117px; }
+}
+
+@keyframes curtain-logo2 {
+    from { width: 0; }
+    to   { width: 350px; }
+}
+
+@keyframes out-logo2 {
+    from { width: 350px; }
+    to   { width: 0px; }
+}
+  
+@keyframes out-logo1 {
+    from {
+        position: relative;
+        top: 0vh;
+        right: 0vw;
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+    to {
+        position: relative;
+        top: -50vh;
+        right: 50vw;
+        transform: translate(50%, 50%);
+        scale: 50%;
+        opacity: 0;
+    }
+}
